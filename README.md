@@ -137,6 +137,23 @@ The analyst reviews and investigates the alert in TheHive.
 
 ---
 
+## Infrastructure Configuration
+
+This project required configuration and customization across multiple security platforms, including:
+
+- Wazuh custom detection rules
+- Wazuh integration configuration (ossec.conf)
+- Filebeat configuration and log forwarding
+- Sysmon event collection and monitoring
+- Shuffle webhook integrations
+- VirusTotal API integration
+- TheHive alert ingestion configuration
+- Linux service management and troubleshooting
+
+These configurations were manually implemented and tested to ensure reliable end-to-end SOC automation.
+
+---
+
 ## Technical Challenges Solved
 
 * Configured custom Wazuh integrations
