@@ -4,7 +4,9 @@
 
 This project demonstrates an end-to-end Security Operations Center (SOC) automation workflow that detects malicious activity, enriches indicators with threat intelligence, automatically creates incidents, and notifies analysts for investigation.
 
-The solution integrates Wazuh SIEM, Sysmon, Shuffle SOAR, VirusTotal, TheHive, and Email Notification services to automate detection, enrichment, incident creation, and alert escalation.
+The solution integrates **Microsoft Azure**, **Wazuh SIEM**, **Sysmon**, **Shuffle SOAR**, **VirusTotal**, **TheHive**, and **Email Notification Services** to automate detection, enrichment, incident creation, and alert escalation.
+
+The lab environment was deployed using Azure virtual machines to simulate a real-world SOC infrastructure and incident response workflow.
 
 ---
 
@@ -26,7 +28,33 @@ The solution integrates Wazuh SIEM, Sysmon, Shuffle SOAR, VirusTotal, TheHive, a
 
 ---
 
+## Lab Environment
+
+### Cloud Infrastructure
+
+The environment was deployed in Microsoft Azure using multiple virtual machines.
+
+Infrastructure included:
+
+* Azure-hosted Windows Endpoint
+* Azure-hosted Wazuh Manager
+* Azure-hosted TheHive Server
+* Sysmon Endpoint Monitoring
+* Shuffle SOAR Platform
+* VirusTotal Integration
+
+### Azure Virtual Machines
+
+![Azure VMs](images/azure-vms.png)
+
+---
+
 ## Technology Stack
+
+### Cloud Infrastructure
+
+* Microsoft Azure
+* Azure Virtual Machines
 
 ### Monitoring & Detection
 
@@ -82,18 +110,6 @@ TheHive Alert Creation
 Email Notification
 ↓
 SOC Analyst Investigation
-
----
-
-## Lab Environment
-
-### Azure Virtual Machines
-
-![Azure VMs](images/azure-vms.png)
-
-### Wazuh Dashboard
-
-![Wazuh Dashboard](images/wazuh.png)
 
 ---
 
@@ -153,23 +169,11 @@ The analyst reviews and investigates the alert in TheHive.
 
 ---
 
-## Key Features
-
-* Automated Mimikatz detection
-* Custom Wazuh detection rules
-* Webhook-based SIEM to SOAR integration
-* SHA256 extraction using regex
-* VirusTotal threat intelligence enrichment
-* Automated TheHive incident creation
-* Automated analyst email notifications
-* End-to-end SOC orchestration
-
----
-
 ## Infrastructure Configuration
 
 This project required configuration and customization across multiple security platforms, including:
 
+* Azure virtual machine deployment and management
 * Wazuh custom detection rules
 * Wazuh integration configuration (ossec.conf)
 * Filebeat configuration and log forwarding
@@ -185,6 +189,7 @@ These configurations were manually implemented and tested to ensure reliable end
 
 ## Technical Challenges Solved
 
+* Deployed and managed a multi-server SOC environment in Microsoft Azure
 * Configured custom Wazuh integrations
 * Established reliable webhook communication between Wazuh and Shuffle
 * Parsed Sysmon hash fields using regex
@@ -218,8 +223,10 @@ These configurations were manually implemented and tested to ensure reliable end
 * SOAR Development
 * Threat Intelligence Enrichment
 * Incident Response
-* Log Analysis
+* Cloud Security Monitoring
+* Microsoft Azure Administration
 * Linux Administration
+* Log Analysis
 * API Integration
 * JSON Processing
 * Regex Development
@@ -228,6 +235,18 @@ These configurations were manually implemented and tested to ensure reliable end
 
 ---
 
+## Project Outcomes
+
+* Built an Azure-hosted SOC automation environment.
+* Developed custom Wazuh detections for Mimikatz activity.
+* Automated alert enrichment using VirusTotal.
+* Automated incident creation in TheHive.
+* Integrated SIEM, SOAR, Threat Intelligence, and Case Management platforms.
+* Reduced manual analyst triage through workflow automation.
+* Simulated a real-world SOC investigation workflow from detection through incident creation.
+
+---
+
 ## End Result
 
-Successfully developed an automated SOC workflow that detects malicious activity, enriches indicators with threat intelligence, creates incidents in TheHive, and notifies analysts automatically, reducing manual triage effort and improving incident response efficiency.
+Successfully developed an Azure-hosted SOC workflow that detects malicious activity, enriches indicators with threat intelligence, creates incidents in TheHive, and notifies analysts automatically, reducing manual triage effort and improving incident response efficiency.
